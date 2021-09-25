@@ -1,18 +1,13 @@
 // Only change code below this line
-function myCounter(n){
-
-    if(n < 1){
+function myCounter(n) {
+    if (n <= 0) {
         return [];
-    }else {
-        const counterArr = myCounter(n-1);
-        counterArr.unshift(n);
-        return counterArr;
+    } else {
+        const countArray = myCounter(n - 1);
+        countArray.unshift(n);
+        return countArray;
     }
-
 }
-
-
 // Only change code above this line
-
-console.log(myCounter(5));
+console.log(myCounter(10)); // Change this line
 module.exports = myCounter;
